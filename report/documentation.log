@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.11)  11 JUL 2023 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.11)  11 JUL 2023 16:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -223,15 +223,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 16.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
  [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
  (/Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/documentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 36.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 37.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
  5486 strings out of 480608
@@ -240,9 +240,9 @@ Here is how much of TeX's memory you used:
  21296 multiletter control sequences out of 15000+600000
  536585 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,30p,374b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,6n,30p,382b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on "/Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/documentation.pdf" (1 page, 65714 bytes).
+Output written on "/Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/documentation.pdf" (1 page, 74823 bytes).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
