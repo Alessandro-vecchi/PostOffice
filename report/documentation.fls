@@ -72,11 +72,37 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/bookmark/bookmark.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/bookmark/bookmark.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/lmodern.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/lmodern.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/documentation.aux
 INPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/documentation.aux
 OUTPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/documentation.aux
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
@@ -90,26 +116,66 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 OUTPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/documentation.pdf
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmmi8.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmsy8.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmsy6.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmex10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmbx9.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/images/PostOfficeERdiagram.png
+INPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/images/PostOfficeERdiagram.png
+INPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/images/PostOfficeERdiagram.png
+INPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/images/relationalSchema.png
+INPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/images/relationalSchema.png
+INPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/images/relationalSchema.png
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/ot1lmtt.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/ot1lmtt.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmtt10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmtk10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmmi7.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/rm-lmtti10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/ts1lmtt.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/ts1lmtt.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/ts1-lmtt10.tfm
 INPUT /Users/alessandrovecchi/Desktop/Database Management and Analysis 2/project/PostOffice/report/documentation.aux
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx9.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr17.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr9.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtk10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtti10.pfb

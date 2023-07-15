@@ -1,0 +1,36 @@
+CREATE TABLE Users (
+    FiscalCode char(16) PRIMARY KEY,
+    Name varchar(50) NOT NULL,
+    Surname varchar(50) NOT NULL,
+    DateOfBirth date NOT NULL,
+    Email varchar(255),
+    City varchar(35) NOT NULL,
+    ZIP char(5) NOT NULL,
+    Address varchar(100) NOT NULL
+);
+
+CREATE TABLE Service (
+    Type varchar(255) PRIMARY KEY,
+    MaxTime int NOT NULL,
+    Price decimal(10,2)
+);
+
+CREATE TABLE PostalWorker (
+    ID varchar(255) PRIMARY KEY,
+    RAL decimal(10,2),
+    Name varchar(50) NOT NULL,
+    Surname varchar(50) NOT NULL,
+    Email varchar(255)
+);
+
+CREATE TABLE Reservation (
+    ReservationID varchar(255) PRIMARY KEY,
+    Date date NOT NULL,
+    Time time NOT NULL,
+    UserFiscalCode char(16),
+    PostalWorkerID varchar(255),
+    TypeOfService varchar(255),
+    FOREIGN KEY (UserFiscalCode) REFERENCES Users(FiscalCode),
+    FOREIGN KEY (PostalWorkerID) REFERENCES PostalWorker(ID),
+    FOREIGN KEY (TypeOfService) REFERENCES Service(Type)
+);
