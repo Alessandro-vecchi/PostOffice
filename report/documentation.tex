@@ -57,6 +57,10 @@ This is the ER diagram of the database:
 \includegraphics[width=12cm]{images/PostOfficeERdiagram.png}
 \end{center}
 
+Notice that we added a generalization relationship between the Users and PostalWorker entities. This is because a postal worker is also a user of the post office services. This generalization relationship allows us to avoid duplicating the information about the postal workers in the Users table. The generalization relationship is total because every postal worker is also a user of the post office services.
+
+Notice that we added a generalization relationship between the Person entity and the User and PostalWorker entities. This is because a user and a postal worker are both people. This generalization relationship allows us to avoid duplicating the information about the people in the Users and PostalWorker tables. The generalization relationship is partial and overlapping because there are person who are not users or postal worker and every postal worker might be a user of the post office.
+
 The relational schema:
 \begin{center}
 \includegraphics[width=12cm]{images/relationalSchema.png}
@@ -239,5 +243,6 @@ WHERE UserFiscalCode = 'DNSFNC01C24E958W';
 
 \section{Conclusion}
 % Write your conclusion here
-
+In conclusion, we manage to create a working database for a post office. We designed the database, implemented it in PostgreSQL, and populated it with sample data. We also wrote some sample queries to test the database. \\
+We are almost ready to deploy it!
 \end{document}
