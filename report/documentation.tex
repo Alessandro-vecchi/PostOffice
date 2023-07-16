@@ -35,7 +35,13 @@ The report presents a project for the Data Management and Analysis course. The p
 % Describe the project here
 This database is designed to manage the operations of a Post Office. It keeps track of users, postal workers, services offered, and reservations made for these services.
 
-In the following section we are going to write the detailed description of the database we realized, along with the constraints and the trigger considered. Then we will show the ER diagram and the relational schema of the database. Finally, we will show the SQL code used to create the database and we will populate it with sample data.
+For completeness, the original project assignment is reported as follows: 
+
+\textit{Your team must create a database in order to manage reservations at a post office.}
+\textit{The database must have at least one table showing information about postal workers (with identification number); one table that reports reservations (number of presentation, date, time service); one table for users (name, surname, reservation identification number); one table for type of service (i.e: mail, bill payment, insurance, internet connectivity); for each type of service, the maximum time to complete the practice is present. A user cannot be booked for two operations at the same time.}
+\textit{The team must populate the tables.}
+
+In the following section we are going to provide the detailed description of the database we realized, along with the constraints and the trigger considered. Then we'll show the ER diagram and the relational schema of the database. Finally, we'll explain the SQL code used to create the database and we will populate it with sample data.
 \section{Database Design}
 % Describe the database design here
 The database consists of four main tables: Users, PostalWorker, Service, and Reservation.
@@ -46,7 +52,7 @@ The PostalWorker table stores information about the postal workers. Each postal 
 
 The Service table stores information about the services offered by the post office. Each service is uniquely identified by its type. Other information stored about each service includes the maximum time it takes and its price. The maximum time is stored as a time value, and the price must be greater than 0.
 
-The Reservation table stores information about the reservations made by users for the services. Each reservation is uniquely identified by its reservation ID\@. Other information stored about each reservation includes the date, time, user fiscal code, postal worker ID, and type of service. The user fiscal code, postal worker ID, and type of service are foreign keys referencing the Users, PostalWorker, and Service tables, respectively.
+The Reservation table stores information about the reservations made by users for the services. Each reservation is uniquely identified by its reservation ID\@. Other information stored about each reservation includes the date, time, user fiscal code, postal worker ID, and type of service. The user fiscal code, postal worker ID, and type of service are foreign keys referencing the Users, PostalWorker, and Service tables, respectively. The PostalWorkerID can be null, since it's usually assigned at a later point in time.
 
 The database also includes a trigger to prevent a user from booking two services that overlap in time. Before a new reservation is inserted or an existing reservation is updated, the trigger checks if the user has any other reservations at the same date and time that overlap with the new or updated reservation. If such an overlapping reservation exists, the trigger raises an exception and prevents the operation from completing.
 
@@ -160,6 +166,58 @@ BEFORE INSERT OR UPDATE ON Reservation
 FOR EACH ROW EXECUTE PROCEDURE check_double_booking();
 
 \end{lstlisting}
+In addition to this trigger, we added other two triggers. The first one verifies that a postal worker does not serve two services at the same time.
+\begin{lstlisting}[language=SQL]
+    CREATE OR REPLACE FUNCTION check_worker_double_booking() RETURNS TRIGGER AS $$
+DECLARE
+    overlapping_reservation_count INT;
+BEGIN
+    SELECT COUNT(*)
+    INTO overlapping_reservation_count
+    FROM Reservation
+    JOIN Service S on S.Type = Reservation.TypeOfService
+    WHERE PostalWorkerID = NEW.PostalWorkerID
+    AND Date = NEW.Date
+    AND NEW.Time < (Time + S.MaxTime::interval)
+    AND (NEW.Time + (SELECT MaxTime::interval FROM Service WHERE Type = NEW.TypeOfService)) > Time;
+
+    IF overlapping_reservation_count > 0 THEN
+        RAISE EXCEPTION 'A postal worker cannot serve two services at the same time';
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER prevent_worker_double_booking
+BEFORE INSERT OR UPDATE ON Reservation
+FOR EACH ROW EXECUTE PROCEDURE check_worker_double_booking();
+\end{lstlisting}
+The second one checks that a postal worker does not serve more than 20 services per day.
+\begin{lstlisting}[language=SQL]
+    CREATE OR REPLACE FUNCTION check_reservation_limit() RETURNS TRIGGER AS $$
+    DECLARE
+        reservation_count INT;
+    BEGIN
+        SELECT COUNT(*)
+        INTO reservation_count
+        FROM Reservation
+        WHERE PostalWorkerID = NEW.PostalWorkerID
+        AND Date = NEW.Date;
+    
+        IF reservation_count >= 20 THEN
+            RAISE EXCEPTION 'A postal worker cannot serve more than 10 reservations per day';
+        END IF;
+    
+        RETURN NEW;
+    END;
+    $$ LANGUAGE plpgsql;
+    
+    CREATE TRIGGER prevent_overbooking
+    BEFORE INSERT OR UPDATE ON Reservation
+    FOR EACH ROW EXECUTE PROCEDURE check_reservation_limit();
+\end{lstlisting}
+
 \section{Sample Data}
 % Describe the sample data here
 Finally, we had to insert some sample data into the database. We will provide some snippets of the SQL code we used to insert the sample data:
@@ -186,12 +244,21 @@ VALUES
 ('R002', '2023-07-15', '09:30:00', 'BLLMRC02D25E958X', 'PW002', 'Internet Connectivity'),
 ('R003', '2023-07-15', '10:00:00', 'RSSFBA03E26E958Y', 'PW003', 'Insurance'),
 ('R004', '2023-07-15', '10:30:00', 'VRDLCA04F27E958Z', 'PW004', 'Mail'),
+('R091', '2023-07-19', '09:00:00', 'DNSFNC01C24E958W', null, 'Bill Payment')
 \end{lstlisting}
 
 \section{Sample queries}
 % Write some sample queries here
 This section was not required. It's just a collection of some sample queries we wrote to test the database.
 
+0. This is what happens if we try to book two services that overlap in time:
+\begin{lstlisting}[language=SQL]
+    INSERT INTO Reservation (ReservationID, Date, Time, UserFiscalCode, PostalWorkerID, TypeOfService) VALUES
+    ('R091', '2023-07-15', '09:10:00', 'DNSFNC01C24E958W', null, 'Mail');
+\end{lstlisting}
+\begin{center}
+    \includegraphics[width=12cm]{images/trigger.png}
+\end{center}
 1. Find all reservations made by a specific user:
 
 \begin{lstlisting}[language=SQL]
